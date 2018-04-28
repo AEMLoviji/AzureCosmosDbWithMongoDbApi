@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace MyTaskListApp.Models
+namespace TaskListApp.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

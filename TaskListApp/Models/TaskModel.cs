@@ -6,7 +6,7 @@ using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson.Serialization.IdGenerators;
 using MongoDB.Bson;
 
-namespace MyTaskListApp.Models
+namespace TaskListApp.Models
 {
     public class MyTask
     {

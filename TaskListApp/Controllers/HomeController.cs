@@ -1,23 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using MyTaskListApp.Models;
-using System.Configuration;
+using TaskListApp.Models;
 
-namespace MyTaskListApp.Controllers
+namespace TaskListApp.Controllers
 {
     public class HomeController : Controller, IDisposable
     {
-        private Dal dal = new Dal();
+        private TaskRepository taskRepository = new TaskRepository();
         private bool disposed = false;
         //
         // GET: /MyTask/
 
         public ActionResult Index()
         {
-            return View(dal.GetAllTasks());
+            return View(taskRepository.GetAllTasks());
         }
 
         //
@@ -36,7 +32,7 @@ namespace MyTaskListApp.Controllers
         {
             try
             {
-                dal.CreateTask(task);
+                taskRepository.CreateTask(task);
                 return RedirectToAction("Index");
             }
             catch
@@ -64,7 +60,7 @@ namespace MyTaskListApp.Controllers
             {
                 if (disposing)
                 {
-                    this.dal.Dispose();
+                    this.taskRepository.Dispose();
                 }
             }
 

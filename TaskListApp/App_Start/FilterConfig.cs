@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace MyTaskListApp
+namespace TaskListApp
 {
     public class FilterConfig
     {

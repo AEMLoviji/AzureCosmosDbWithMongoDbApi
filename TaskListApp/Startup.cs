@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(MyTaskListApp.Startup))]
-namespace MyTaskListApp
+[assembly: OwinStartupAttribute(typeof(TaskListApp.Startup))]
+namespace TaskListApp
 {
     public partial class Startup
     {
